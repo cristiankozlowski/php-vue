@@ -1,0 +1,28 @@
+{
+  "name": "cristiankozlowski/gerenciador-de-noticias",
+  "description": "Gerenciador de Notícias",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Cristian Kozlowski",
+      "email": "cristiankozlowski@hotmail.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Source\\": "source"
+    },
+    "files": [
+      "source/Config.php",
+      "source/Helpers.php"
+    ]
+  },
+  "require": {
+    "ext-json": "*",
+    "coffeecode/router": "1.0.7",
+    "coffeecode/datalayer": "1.1.4",
+    "league/plates": "v4.0.0-alpha"
+  }
+}

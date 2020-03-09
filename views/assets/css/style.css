@@ -1,0 +1,125 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-size: 13px;
+}
+
+#app .titulo_topo {
+  background-color: #122ab2;
+  color: #fff;
+  padding: 15px 30px;
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.close_modal {
+  display: block;
+  float: right;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border: 2px solid #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* News */
+.news_items {
+  margin-bottom: 15px;
+}
+
+.news_items h1 {
+  margin-bottom: 10px;
+}
+
+.container_content {
+  display: flex;
+}
+
+.container_content img {
+  min-width: 250px;
+  min-height: 150px;
+}
+
+.container_content p {
+  padding-left: 10px;
+}
+
+.news_content {
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #f8f8f8;
+  color: #333;
+  border: 3px solid #333;
+  border-radius: 3px;
+  padding: 8px 8px;
+  margin: 10px 0 20px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transition: 0.2s;
+  padding: 10px 10px;
+}
+
+/* News to update */
+
+.news_update {
+  position: absolute;
+  background-color: #fff;
+  margin-top: 100px;
+  padding: 80px 120px;
+  border: 3px solid #333;
+}
+
+.form_update input,
+.form_update label,
+.form_update textarea,
+.form_update .btn {
+  display: block;
+  width: 500px;
+  height: 40px;
+}
+
+.form_update input,
+.form_update textarea {
+  margin-bottom: 8px;
+}
+
+/* News to create */
+.news_create {
+  position: absolute;
+  background-color: #fff;
+  margin-top: 100px;
+  padding: 80px 120px;
+  border: 3px solid #333;
+}
+
+.form_create input,
+.form_create label,
+.form_create textarea,
+.form_create .btn {
+  display: block;
+  width: 500px;
+  height: 40px;
+}
+
+.form_create input,
+.form_create textarea {
+  margin-bottom: 8px;
+  padding: 10px;
+}

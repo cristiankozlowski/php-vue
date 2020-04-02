@@ -21,6 +21,7 @@ class Noticias extends Controller
   }
 
   public function create($data) {
+
     $myNew = (new Noticia());
 
     $myNew->titulo = $data['titulo'];
@@ -42,9 +43,9 @@ class Noticias extends Controller
 
   public function destroy($data)
   {
-    $new = (new Noticia())->findById($data['id']);
+    $single = (new Noticia())->findById($data['id']);
 
-    echo $new->destroy();
+    $single->destroy();
   }
 
   public function xmlGenerator()

@@ -10,6 +10,10 @@ a {
   font-size: 13px;
 }
 
+.with_modal {
+  background: none;
+}
+
 #app .titulo_topo {
   background-color: #122ab2;
   color: #fff;
@@ -22,15 +26,39 @@ a {
   margin: 0 auto;
 }
 
+.alert {
+  border: 3px solid;
+  border-radius: 3px;
+}
+
+.alert.success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert.danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.alert p {
+  padding: 8px 12px;
+}
+
 .close_modal {
-  display: block;
-  float: right;
-  width: 25px;
-  height: 25px;
+  position: absolute;
+  background: #fff;
+  top: -10px;
+  right: -10px;
+  width: 32px;
+  height: 32px;
   text-align: center;
   border: 2px solid #333;
   border-radius: 50%;
   cursor: pointer;
+  font-size: 22px;
 }
 
 /* News */
@@ -77,18 +105,8 @@ a {
 }
 
 /* News to update */
-
-.news_update {
-  position: absolute;
-  background-color: #fff;
-  margin-top: 100px;
-  padding: 80px 120px;
-  border: 3px solid #333;
-}
-
 .form_update input,
 .form_update label,
-.form_update textarea,
 .form_update .btn {
   display: block;
   width: 500px;
@@ -98,20 +116,43 @@ a {
 .form_update input,
 .form_update textarea {
   margin-bottom: 8px;
+  padding: 10px;
 }
 
 /* News to create */
-.news_create {
+.news_create::before,
+.news_update::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translate3d(0, -30px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0px, 0);
+    opacity: 1;
+  }
+}
+
+.form_create,
+.form_update {
   position: absolute;
   background-color: #fff;
-  margin-top: 100px;
-  padding: 80px 120px;
-  border: 3px solid #333;
+  padding: 50px;
+  animation: fadeIn 0.7s;
+  top: 40px;
 }
 
 .form_create input,
 .form_create label,
-.form_create textarea,
 .form_create .btn {
   display: block;
   width: 500px;

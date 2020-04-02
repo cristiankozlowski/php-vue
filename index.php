@@ -16,8 +16,8 @@ $router->get("/", "App:index", "app.index");
 $router->namespace("\Source\Controllers\Api");
 $router->group("/api");
 $router->get("/", "Noticias:index", "noticias.index");
-$router->post("/create/{titulo}/{conteudo}", "Noticias:create", "noticias.create");
-$router->put("/update/{id}/{titulo}/{conteudo}", "Noticias:update", "noticias.update");
+$router->post("/create", "Noticias:create", "noticias.create");
+$router->put("/update/{id}", "Noticias:update", "noticias.update");
 $router->delete("/{id}", "Noticias:destroy", "noticias.destroy");
 
 /* XML */
